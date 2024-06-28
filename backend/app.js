@@ -1,7 +1,7 @@
 const express = require('express')
 const cors = require('cors');
 const { db } = require('./db/db');
-const {readdirSync} = require('fs')
+const { readdirSync } = require('fs')
 //const {route} = require('./routes/transactions')
 const app = express()
 
@@ -14,8 +14,11 @@ app.use(express.json())
 app.use(cors())
 
 //routes
-readdirSync('./routes').map((route) => app.use('/api/v1', require('./routes/' + route)))
+readdirSync('./routes').map((route) => app.use('/api/v1', require('./routes/' + route)));
 
+app.get('/akrick', (req, res) => {
+    res.send("GET Request Called");
+})
 const server = () => {
     db();
     app.listen(PORT, () => {
