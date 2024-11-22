@@ -30,6 +30,9 @@ export function Home() {
       case 5:
         navigate("/home/masters");
         break;
+        case 6:
+          navigate("/home/bankLoan");
+          break;
     }
   }
   return (

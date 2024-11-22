@@ -12,6 +12,7 @@ import Masters from "./components/Masters";
 import { Provider } from "react-redux";
 import { store } from "./store/store";
 import "react-toastify/dist/ReactToastify.css";
+import BankLoan from "./components/BankLoan";
 
 export default function App() {
   return (
@@ -31,6 +32,7 @@ export default function App() {
               <Route path="dashboard" element={<Dashboard />} />
               <Route path="incomes" element={<Incomes />} />
               <Route path="masters" element={<Masters />} />
+              <Route path="bankLoan" element={<BankLoan />} />
               <Route path="**" element={<Dashboard />} />
             </Route>
             <Route path="login" element={<Login />} />

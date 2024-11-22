@@ -37,6 +37,12 @@ const menuItems = [
     icon: tools,
     link: "/masters",
   },
+  {
+    id: 6,
+    title: "BankLoan",
+    icon: tools,
+    link: "/bankLoan",
+  },
 ];
 
 export function Customnavbar({ active, setActive }: any) {
